@@ -473,7 +473,7 @@ main { padding-top: var(--nav-h); }
   pointer-events: none;
 }
 
-.about-bio-text h2 {
+.about-bio-text h3 {
   font-family: 'Jost', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
