@@ -510,7 +510,7 @@ main { padding-top: var(--nav-h); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 56px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .legacy-text {
@@ -519,7 +519,11 @@ main { padding-top: var(--nav-h); }
 }
 .legacy-text p { margin-bottom: 18px; }
 
-.legacy-media { padding-top: 4px; }
+.legacy-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .media-title {
   font-family: 'Jost', sans-serif;
@@ -569,8 +573,9 @@ main { padding-top: var(--nav-h); }
 
 .video-player--short {
   aspect-ratio: 9/16;
-  width: 60%;
-  margin: 0 auto;
+  width: auto;
+  flex: 1;
+  max-width: 100%;
 }
 
 /* ================================
