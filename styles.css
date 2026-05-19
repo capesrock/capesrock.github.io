@@ -510,20 +510,12 @@ main { padding-top: var(--nav-h); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 56px;
-  align-items: stretch;
+  align-items: start;
 }
 
-.legacy-text {
-  display: flex;
-  flex-direction: column;
-}
 .legacy-text p { margin-bottom: 18px; }
 
-.legacy-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.legacy-media { padding-top: 4px; }
 
 .media-title {
   font-family: 'Jost', sans-serif;
@@ -569,13 +561,6 @@ main { padding-top: var(--nav-h); }
   box-shadow:
     0 8px 32px -4px rgba(0,0,0,0.65),
     0 20px 60px -8px rgba(0,0,0,0.45);
-}
-
-.video-player--short {
-  aspect-ratio: 9/16;
-  width: auto;
-  flex: 1;
-  max-width: 100%;
 }
 
 /* ================================
