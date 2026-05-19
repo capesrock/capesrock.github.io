@@ -222,7 +222,7 @@ main { padding-top: var(--nav-h); }
   padding: 58px 32px 44px;
 }
 
-.page-header h1 {
+.page-header h2 {
   font-family: 'Jost', sans-serif;
   font-size: clamp(1.9rem, 3.5vw, 3rem);
   font-weight: 700;
@@ -231,6 +231,7 @@ main { padding-top: var(--nav-h); }
   color: #fff;
   text-shadow: 0 2px 18px rgba(0,0,0,0.55);
 }
+
 
 /* ================================
    HOME ABOUT SPLIT
@@ -292,7 +293,7 @@ main { padding-top: var(--nav-h); }
    NEWSLETTER
    ================================ */
 .newsletter {
-  background: rgba(0, 0, 0, 0.30);
+  background: rgba(0, 0, 0, 0.65);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   text-align: center;
@@ -314,13 +315,16 @@ main { padding-top: var(--nav-h); }
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 460px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
-.newsletter input[type="email"] {
+.newsletter input[type="text"],
+.newsletter input[type="email"],
+.about-newsletter-form input[type="text"],
+.about-newsletter-form input[type="email"] {
   flex: 1;
-  min-width: 210px;
+  min-width: 180px;
   padding: 12px 16px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.18);
@@ -330,10 +334,17 @@ main { padding-top: var(--nav-h); }
   font-size: 0.95rem;
   transition: border-color 0.18s;
 }
-.newsletter input[type="email"]::placeholder { color: rgba(255,255,255,0.35); }
-.newsletter input[type="email"]:focus { outline: none; border-color: rgba(168,200,96,0.55); }
+.newsletter input[type="text"]::placeholder,
+.newsletter input[type="email"]::placeholder,
+.about-newsletter-form input[type="text"]::placeholder,
+.about-newsletter-form input[type="email"]::placeholder { color: rgba(255,255,255,0.35); }
+.newsletter input[type="text"]:focus,
+.newsletter input[type="email"]:focus,
+.about-newsletter-form input[type="text"]:focus,
+.about-newsletter-form input[type="email"]:focus { outline: none; border-color: rgba(168,200,96,0.55); }
 
-.newsletter button {
+.newsletter button,
+.about-newsletter-form button {
   padding: 12px 28px;
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.28);
@@ -347,20 +358,24 @@ main { padding-top: var(--nav-h); }
   cursor: pointer;
   transition: background-color 0.18s, transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.newsletter button:hover { background: rgba(255,255,255,0.20); }
-.newsletter button:focus-visible { outline: 2px solid var(--c-moss); outline-offset: 2px; }
-.newsletter button:active { transform: scale(0.97); }
+.newsletter button:hover,
+.about-newsletter-form button:hover { background: rgba(255,255,255,0.20); }
+.newsletter button:focus-visible,
+.about-newsletter-form button:focus-visible { outline: 2px solid var(--c-moss); outline-offset: 2px; }
+.newsletter button:active,
+.about-newsletter-form button:active { transform: scale(0.97); }
 
 /* ================================
    TESTIMONIAL
    ================================ */
 .testimonial-section {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 32px 64px;
+  padding: 48px 32px 64px;
+  border-top: 3px solid #2d0a5e;
 }
 
 .testimonial {
+  max-width: 860px;
+  margin: 0 auto;
   background: rgba(0, 0, 0, 0.33);
   border-left: 3px solid rgba(168, 200, 96, 0.38);
   border-radius: 0 2px 2px 0;
@@ -380,11 +395,13 @@ main { padding-top: var(--nav-h); }
 /* ================================
    CONTACT
    ================================ */
+#contact {
+  border-top: 3px solid #2d0a5e;
+}
+
 .contact-section {
   text-align: center;
   padding: 72px 32px;
-  max-width: 680px;
-  margin: 0 auto;
 }
 
 .contact-section h2 {
@@ -405,7 +422,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .contact-section a {
-  color: var(--c-moss);
+  color: #fff;
   text-decoration: none;
   font-weight: 700;
   transition: color 0.18s;
@@ -416,14 +433,19 @@ main { padding-top: var(--nav-h); }
 /* ================================
    ABOUT ME PAGE (bio layout)
    ================================ */
+.about-bio-band {
+  background: rgba(147, 195, 255, 0.20);
+  border-top: 3px solid #2d0a5e;
+}
+
 .about-bio {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 32px 72px;
+  padding: 56px 32px 72px;
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 48px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: stretch;
 }
 
 .about-bio-img {
@@ -432,6 +454,9 @@ main { padding-top: var(--nav-h); }
 
 .about-bio-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 2px;
   display: block;
   box-shadow:
@@ -448,7 +473,7 @@ main { padding-top: var(--nav-h); }
   pointer-events: none;
 }
 
-.about-bio-text h1 {
+.about-bio-text h2 {
   font-family: 'Jost', sans-serif;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
@@ -481,41 +506,61 @@ main { padding-top: var(--nav-h); }
   margin-bottom: 18px;
 }
 
-.video-wrap {
-  max-width: 580px;
-  margin: 40px auto 0;
+.legacy-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
 }
 
-.video-wrap iframe {
+.legacy-text p { margin-bottom: 18px; }
+
+.legacy-media { padding-top: 4px; }
+
+.media-title {
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  color: var(--c-text);
+  margin: 0 0 24px;
+}
+
+.media-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.media-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.media-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-dim);
+  margin: 0;
+}
+
+.audio-player {
+  width: 100%;
+  display: block;
+  accent-color: var(--c-moss);
+}
+
+.video-player {
   width: 100%;
   aspect-ratio: 16/9;
-  border: none;
+  display: block;
   border-radius: 2px;
   box-shadow:
     0 8px 32px -4px rgba(0,0,0,0.65),
     0 20px 60px -8px rgba(0,0,0,0.45);
-  display: block;
-}
-
-.video-placeholder {
-  background: rgba(0, 0, 0, 0.38);
-  border: 1px dashed rgba(255, 255, 255, 0.18);
-  border-radius: 2px;
-  padding: 48px 32px;
-  text-align: center;
-  color: var(--c-text-dim);
-  font-size: 0.9rem;
-  line-height: 1.75;
-}
-
-.video-placeholder strong {
-  display: block;
-  font-family: 'Jost', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(226,237,200,0.4);
-  margin-bottom: 8px;
 }
 
 /* ================================
@@ -523,10 +568,11 @@ main { padding-top: var(--nav-h); }
    ================================ */
 .song-list {
   list-style: none;
-  columns: 2;
+  columns: 3;
   column-gap: 32px;
-  max-width: 620px;
+  max-width: 860px;
   margin: 32px auto 0;
+  text-align: center;
 }
 
 .song-list li {
@@ -546,10 +592,11 @@ main { padding-top: var(--nav-h); }
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--c-moss);
+  color: #0d1a02;
+  background: var(--c-moss);
   text-decoration: none;
   padding: 2px 7px;
-  border: 1px solid rgba(168,200,96,0.38);
+  border: 1px solid var(--c-moss);
   border-radius: 1px;
   white-space: nowrap;
   flex-shrink: 0;
@@ -569,7 +616,7 @@ main { padding-top: var(--nav-h); }
 .baby-wishes-content {
   max-width: 760px;
   margin: 0 auto;
-  padding: 48px 32px 80px;
+  padding: 16px 32px 80px;
   text-align: center;
 }
 
@@ -626,7 +673,7 @@ summary.faq-question:focus-visible { outline: 2px solid var(--c-moss); outline-o
   transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.18s;
 }
 
-details[open] summary.faq-question { color: var(--c-moss); }
+details[open] summary.faq-question { color: #fff; }
 details[open] .faq-chevron {
   transform: rotate(180deg);
   border-color: rgba(168,200,96,0.6);
@@ -636,7 +683,7 @@ details[open] .faq-chevron {
   padding: 0 4px 24px;
   font-size: 0.97rem;
   line-height: 1.82;
-  color: var(--c-text);
+  color: #fff;
 }
 
 .faq-answer p { margin-bottom: 12px; }
@@ -652,7 +699,7 @@ details[open] .faq-chevron {
   padding: 4px 0;
   padding-left: 16px;
   position: relative;
-  color: var(--c-text);
+  color: #fff;
 }
 
 .faq-answer ul li::before {
@@ -661,6 +708,156 @@ details[open] .faq-chevron {
   left: 0;
   color: var(--c-moss);
   font-size: 0.85em;
+}
+
+/* ================================
+   SINGLE-PAGE ANCHORS
+   ================================ */
+section[id], #contact {
+  scroll-margin-top: var(--nav-h);
+}
+
+/* ================================
+   SECTION DIVIDERS & TINTS
+   ================================ */
+
+/* Dark divider bar between sections */
+#about, #legacy-projects, #baby-wishes, #other-songs, #faq, #newsletter, .testimonial-section {
+  border-top: 3px solid #2d0a5e;
+}
+
+/* Full gradient applied per-section so each section contains the complete gradient */
+#about,
+#legacy-projects,
+#baby-wishes,
+#other-songs,
+#faq,
+.testimonial-section,
+#contact {
+  background:
+    linear-gradient(rgba(0,0,0,0.22), rgba(0,0,0,0.22)),
+    radial-gradient(circle at 3.68% 6.94%, #4D6001 0%, 11.55%, rgba(77,96,1,0) 35%),
+    radial-gradient(circle at 92.97% 9.55%, #FAAA63 0%, 17.5%, rgba(250,170,99,0) 35%),
+    radial-gradient(circle at 95.21% 90.48%, #C9C6FF 0%, 34.1%, rgba(201,198,255,0) 55%),
+    radial-gradient(circle at 4.31% 93.35%, #97B49D 0%, 29.9%, rgba(151,180,157,0) 65%),
+    radial-gradient(circle at 46.56% 11.50%, rgba(214,222,72,0.99) 0%, 25%, rgba(214,222,72,0) 50%),
+    radial-gradient(circle at 51.12% 89.99%, #93C3FF 0%, 42%, rgba(147,195,255,0) 70%),
+    radial-gradient(circle at 48.90% 49.52%, #020202 0%, 100%, rgba(2,2,2,0) 100%);
+  background-size: 100% 100%;
+}
+
+#legacy-projects .section { max-width: 1100px; padding-top: 16px; }
+#legacy-projects .page-header,
+#baby-wishes .page-header,
+#other-songs .page-header { padding-bottom: 20px; }
+#other-songs .section { padding-top: 16px; }
+
+/* ================================
+   ABOUT CTA / NEWSLETTER
+   ================================ */
+.about-cta {
+  text-align: center;
+  padding: 40px 32px 64px;
+  border-top: 3px solid #2d0a5e;
+}
+
+.about-cta h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 500;
+  color: var(--c-text);
+  margin: 0 0 24px;
+}
+
+.about-newsletter-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--c-moss);
+  color: #0d1a02;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background-color 0.18s, transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.btn-cta:hover { background: #c0df72; transform: translateY(-2px); }
+.btn-cta:active { transform: scale(0.97); }
+.btn-cta:focus-visible { outline: 2px solid var(--c-moss); outline-offset: 3px; }
+
+/* ================================
+   SUBSCRIBE MODAL
+   ================================ */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+.modal[hidden] { display: none; }
+
+.modal-box {
+  background: #111a05;
+  border: 1px solid rgba(168, 200, 96, 0.25);
+  border-radius: 4px;
+  padding: 48px 40px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 24px 80px -8px rgba(0, 0, 0, 0.80);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--c-text-dim);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.modal-close:hover { color: var(--c-text); }
+
+.modal-icon {
+  font-size: 2rem;
+  margin: 0 0 16px;
+  color: var(--c-moss);
+}
+
+.modal-box h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--c-text);
+  margin: 0 0 12px;
+}
+
+.modal-box p {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.95rem;
+  color: var(--c-text-dim);
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* ================================
@@ -702,7 +899,7 @@ footer {
     padding: 32px 20px 56px;
     gap: 28px;
   }
-  .about-bio-img img { max-width: 260px; }
+  .about-bio-img img { max-width: 100%; }
 
   .hero { height: 48vh; }
   .hero-title { padding: 20px 20px 36px; }
@@ -714,7 +911,8 @@ footer {
   .faq-wrap { padding: 0 20px 56px; }
   .page-header { padding: 44px 20px 32px; }
   .baby-wishes-content { padding: 40px 20px 64px; }
-  .video-wrap { margin: 28px 20px 0; }
+  .legacy-split { grid-template-columns: 1fr; gap: 40px; }
+  .media-wrap { margin: 0; }
 
   .song-list { columns: 1; }
 }

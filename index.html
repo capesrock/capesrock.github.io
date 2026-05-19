@@ -15,61 +15,230 @@
   <nav class="site-nav">
     <div class="nav-inner">
       <div class="nav-links">
-        <a href="/" class="active">Home</a>
-        <a href="/about/">About Me</a>
-        <a href="/legacy-projects/">Legacy Projects</a>
+        <a href="#hero">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#legacy-projects">Legacy Projects</a>
       </div>
       <div class="nav-logo-wrap">
-        <a href="/" aria-label="Custom Life Songs — home">
+        <a href="#hero" aria-label="Custom Life Songs — home">
           <img src="/images/logo.png" alt="Custom Life Songs" width="50" height="50">
         </a>
       </div>
       <div class="nav-links">
-        <a href="/baby-wishes/">Baby Wishes</a>
-        <a href="/other-custom-songs/">Other Custom Songs</a>
-        <a href="/faq/">FAQ</a>
+        <a href="#baby-wishes">Baby Wishes</a>
+        <a href="#other-songs">Other Custom Songs</a>
+        <a href="#faq">FAQ</a>
       </div>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="nav-btn">&#9776;</button>
     </div>
     <div class="nav-mobile" id="nav-mobile">
-      <a href="/" class="active">Home</a>
-      <a href="/about/">About Me</a>
-      <a href="/legacy-projects/">Legacy Projects</a>
-      <a href="/baby-wishes/">Baby Wishes</a>
-      <a href="/other-custom-songs/">Other Custom Songs</a>
-      <a href="/faq/">FAQ</a>
+      <a href="#hero">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#legacy-projects">Legacy Projects</a>
+      <a href="#baby-wishes">Baby Wishes</a>
+      <a href="#other-songs">Other Custom Songs</a>
+      <a href="#faq">FAQ</a>
     </div>
   </nav>
 
   <main>
 
-    <section class="hero" aria-label="Hero">
+    <section class="hero" id="hero" aria-label="Hero">
       <img src="/images/hero-couple.jpg" alt="Couple sharing a moment outdoors" class="hero-img">
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-tint" aria-hidden="true"></div>
       <h1 class="hero-title">Custom Life Songs</h1>
     </section>
 
-    <div class="about-split">
-      <div class="about-split-text">
-        <h2>About Custom Life Songs</h2>
-        <p>I am passionate about capturing the essence of an individual through music! I love talking to people about their lives and loved ones. Through these conversations, I learn what makes each person unique and special, and synthesize what people say into personalized songs.</p>
-        <p>I allow the people to choose the mood of music that resonates with them, whether it's joyful, reflective, nostalgic, etc. My mission is to create a lasting musical tribute that honors a life journey, preserving their memories in a beautiful and meaningful way.</p>
-        <p>Whether you are a family wanting to commemorate your parent's life, or someone wanting to leave a legacy song for your children, I'd love to help. Let's create a soundtrack to your story together!</p>
-      </div>
-      <div class="about-split-img">
-        <img src="/images/guitar-woman.jpg" alt="Jen holding her guitar">
-      </div>
-    </div>
+    <section id="about">
 
-    <div class="newsletter">
-      <h3>Subscribe to My Newsletter</h3>
-      <!-- TODO: Replace this form action with your Mailchimp embed URL -->
-      <form action="#" method="post">
-        <input type="email" name="EMAIL" placeholder="Enter your email here" required aria-label="Email address">
-        <button type="submit">Sign Up</button>
-      </form>
-    </div>
+      <div class="about-split">
+        <div class="about-split-text">
+          <h2>About Custom Life Songs</h2>
+          <p>I am passionate about capturing the essence of an individual through music! I love talking to people about their lives and loved ones. Through these conversations, I learn what makes each person unique and special, and synthesize what people say into personalized songs.</p>
+          <p>I allow the people to choose the mood of music that resonates with them, whether it's joyful, reflective, nostalgic, etc. My mission is to create a lasting musical tribute that honors a life journey, preserving their memories in a beautiful and meaningful way.</p>
+          <p>Whether you are a family wanting to commemorate your parent's life, or someone wanting to leave a legacy song for your children, I'd love to help. Let's create a soundtrack to your story together!</p>
+        </div>
+        <div class="about-split-img">
+          <img src="/images/guitar-woman.jpg" alt="Jen holding her guitar">
+        </div>
+      </div>
+
+      <div class="about-bio-band">
+        <div class="about-bio">
+          <div class="about-bio-img">
+            <img src="/images/about-portrait.jpg" alt="Jen, songwriter and musician">
+          </div>
+          <div class="about-bio-text">
+            <h2>Hello</h2>
+            <p>Welcome to my world of custom songwriting! I am a passionate songwriter and mental health professional based in the Pacific Northwest, with over 30 years of experience playing guitar and writing songs, including 15 years dedicated to custom songwriting. My approach is both heartfelt and engaging, as I strive to learn about the unique stories of each individual I work with. Whether it's a birthday, wedding, or a tribute to someone's life, my songs capture the essence of personal experiences and emotions.</p>
+            <p>I specialize in creating songs that help people tell their life stories, making them a meaningful gift, especially for older adults. The process involves intimate interviews, allowing me to connect with the person for whom the song is being written, as well as their loved ones. I believe that everyone has a story worth telling, and I am here to help honor those stories through music.</p>
+            <p>As an active member of the songwriting community in the region, I am connected to many talented musicians, which enriches my creative process. Let's work together to create a beautiful legacy project that resonates with you and your loved ones.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-cta">
+        <h3>Subscribe to My Newsletter</h3>
+        <form action="https://api.web3forms.com/submit" method="POST" class="about-newsletter-form">
+          <input type="hidden" name="access_key" value="fa552091-2007-441c-98a9-6f6c7024191e">
+          <input type="hidden" name="subject" value="New newsletter signup — Custom Life Songs">
+          <input type="hidden" name="redirect" value="false">
+          <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
+          <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+    </section>
+
+    <section id="legacy-projects">
+      <div class="page-header">
+        <h2>Legacy Projects</h2>
+      </div>
+      <div class="section legacy-split">
+        <div class="legacy-text">
+          <p>A legacy project is orchestrated by the individual the song is for, and/or any loved ones who would like to be involved. This can look a variety of ways, including live interviews, and/or having loved ones fill out questionnaires, depending on the number of people involved. You may involve as many people's input as you wish.</p>
+          <p>The interviews and questionnaires are targeted at finding out the most important details of the person's life. I will synthesize all of the answers, pulling out the most important themes and memories in order to create a fully unique song, tailored to tell the story of a life. These are great group gifts! I am happy to come and perform your song, and you can even choose to have it professionally recorded and produced!</p>
+          <p>Below is an example of my work! This song is about Patrick, his dreams throughout his life, and his family. I taught it to many members of his family, and we performed it for him at his nursing home. You can see a video clip and listen to the song below!</p>
+        </div>
+        <div class="legacy-media">
+          <h3 class="media-title">Patrick's Song</h3>
+          <div class="media-wrap">
+            <div class="media-item">
+              <p class="media-label">Studio recording</p>
+              <audio controls class="audio-player">
+                <source src="/media/patricks-song.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+            <div class="media-item">
+              <p class="media-label">Live performance</p>
+              <video controls class="video-player">
+                <source src="/media/patricks-song.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="baby-wishes">
+      <div class="page-header">
+        <h2>Baby Wishes</h2>
+      </div>
+      <div class="baby-wishes-content">
+        <p>Every parent has wishes for their child, and I will help you put these into song. I will interview you about the types of things you would like to say to your child, and will synthesize what you say into melody and lyrics for them to hear as they grow older, and for you all to share together as a family. We can include as many people from your family and friends as you like in this process.</p>
+      </div>
+    </section>
+
+    <section id="other-songs">
+      <div class="page-header">
+        <h2>Any type of song you wish</h2>
+      </div>
+      <div class="section section-centered">
+        <p>I am able to fulfill just about any type of song request! The process is the same as for custom life songs — I will interview you about what is most important, and synthesize your answers into a custom song. You can choose to add a professionally produced recording, and/or a performance of your song, based on availability. I can write songs about any of the following topics, and more!</p>
+
+        <ul class="song-list">
+          <li><span>Custom Life Songs</span></li>
+          <li><span>Group Life Songs</span></li>
+          <li><span>Weddings</span> <a href="https://soundcloud.com/jen-wagner/leaving-no-doubt" target="_blank" rel="noopener" class="listen-link" aria-label="Listen to a wedding song example">Listen</a></li>
+          <li><span>Birthdays</span></li>
+          <li><span>Anniversaries</span> <a href="https://open.spotify.com/track/6nOKgswnVJA8yGeYqt3IXh" target="_blank" rel="noopener" class="listen-link" aria-label="Listen to an anniversary song example">Listen</a></li>
+          <li><span>Kids Songs</span> <a href="https://open.spotify.com/track/67tzv25oL4nYIYBnwo9hKu" target="_blank" rel="noopener" class="listen-link" aria-label="Listen to a kids song example">Listen</a></li>
+          <li><span>Graduations</span></li>
+          <li><span>Memorials</span></li>
+          <li><span>Pet Theme Songs</span> <a href="https://soundcloud.com/jen-wagner/norman-1/s-95vAUHJ9Edd" target="_blank" rel="noopener" class="listen-link" aria-label="Listen to a pet theme song example">Listen</a></li>
+          <li><span>Life Milestones</span></li>
+          <li><span>Coming of Age</span></li>
+          <li><span>Achievements</span></li>
+          <li><span>Parenthood</span></li>
+          <li><span>Roasts &amp; Pranks</span></li>
+          <li><span>Family Milestones</span></li>
+          <li><span>Recognition</span></li>
+          <li><span>Journeys &amp; Arrivals</span></li>
+          <li><span>Cheering Up</span></li>
+          <li><span>Connections</span></li>
+          <li><span>And more!</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="page-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-wrap">
+
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            What do the interviews entail?
+            <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Individual interviews typically last for approximately an hour or two, where I will ask questions about your life, trying to pull out what has been most special to you and/or your loved ones. I will also play various types of music for you, so that you can pick the style of song that you would like. I may also require a written questionnaire.</p>
+            <p>For group processes, the process varies, but I will usually do a combination of interviews and questionnaires, depending on the number of people involved. Group songs require a point person, who will contact participants with the form, and who I may have follow-up questions for.</p>
+            <p>For other types of songs, interviews and forms depend on the song type and process (individual or group).</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Can I add a live performance?
+            <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes! Live performances are available for an extra cost, depending on availability. I would love to come and perform your song for you and/or your loved ones. Just let me know at the time of your booking when and where you would like to have your song played, and we will make a plan.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            What does the recording include?
+            <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>The recording process varies in type and length, and you choose the level of complexity of production. I can make you a simple recording fairly quickly and inexpensively, but you may also choose to add extra instrumentation and production. You may choose the number and types of instruments, the type of vocalist, and the all-around level of production.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            What is the cost?
+            <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Cost varies, depending on a number of factors including the number of people involved in the interviews, the level of production you choose for the recording, and if you choose to add a live performance. Please <a href="mailto:customlifesongs@gmail.com" style="color:var(--c-moss);font-weight:700;">get in touch</a> for a quote today!</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            What other types of songs are available?
+            <span class="faq-chevron" aria-hidden="true">&#9660;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>The sky is the limit here! We are able to write songs for any type of occasion, including:</p>
+            <ul>
+              <li>Custom Life Songs</li>
+              <li>Group Life Songs</li>
+              <li>Weddings</li>
+              <li>Birthdays &amp; Anniversaries</li>
+              <li>Kids Songs</li>
+              <li>Graduations &amp; Memorials</li>
+              <li>Pet Theme Songs</li>
+              <li>Life Milestones &amp; Coming of Age</li>
+              <li>Achievements &amp; Recognition</li>
+              <li>Parenthood &amp; Baby Wishes</li>
+              <li>Roasts &amp; Pranks (good natured)</li>
+              <li>Family Milestones</li>
+              <li>Journeys &amp; Arrivals</li>
+              <li>And more!</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </section>
 
     <div class="testimonial-section">
       <div class="testimonial">
@@ -77,13 +246,34 @@
       </div>
     </div>
 
-    <div class="contact-section">
+    <section id="newsletter" class="newsletter">
+      <h3>Subscribe to My Newsletter</h3>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="fa552091-2007-441c-98a9-6f6c7024191e">
+        <input type="hidden" name="subject" value="New newsletter signup — Custom Life Songs">
+        <input type="hidden" name="redirect" value="false">
+        <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
+        <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+
+    <div id="contact" class="contact-section">
       <h2>Get in Touch</h2>
       <p>Have a question or want to discuss a custom song? Feel free to reach out at any time!</p>
       <p><a href="mailto:customlifesongs@gmail.com">customlifesongs@gmail.com</a></p>
     </div>
 
   </main>
+
+  <div id="subscribe-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close">&#10005;</button>
+      <p class="modal-icon">&#9835;</p>
+      <h3 id="modal-title">Thanks for subscribing!</h3>
+      <p>You're on the list. I'll be in touch with news and updates.</p>
+    </div>
+  </div>
 
   <footer>copyright 2024 by Custom Life Songs</footer>
 

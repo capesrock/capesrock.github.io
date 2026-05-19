@@ -1,0 +1,24 @@
+{
+  "name": "customlifesongs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capesrock/customlifesongs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/capesrock/customlifesongs/issues"
+  },
+  "homepage": "https://github.com/capesrock/customlifesongs#readme",
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}

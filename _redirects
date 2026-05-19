@@ -1,7 +1,15 @@
 # Cloudflare Pages redirects
-# Redirect old Wix URL slugs to new paths
-/about-5         /about/         301
-/about-4         /legacy-projects/  301
-/about-4-1       /other-custom-songs/  301
-/baby-wishes     /baby-wishes/   301
-/faq             /faq/           301
+# Redirect old Wix URL slugs → home (single-page site now)
+/about-5              /  301
+/about-4              /  301
+/about-4-1            /  301
+/about/               /  301
+/about                /  301
+/legacy-projects/     /  301
+/legacy-projects      /  301
+/baby-wishes/         /  301
+/baby-wishes          /  301
+/other-custom-songs/  /  301
+/other-custom-songs   /  301
+/faq/                 /  301
+/faq                  /  301

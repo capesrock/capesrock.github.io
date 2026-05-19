@@ -1,5 +1,9 @@
 # CLAUDE.md — Custom Life Songs
 
+## Skills
+
+Always use the `frontend-design` skill when doing any UI or frontend work on this project.
+
 ## Project Overview
 
 This is a static site clone of customlifesongs.com (originally on Wix), rebuilt for hosting on Cloudflare Pages. It belongs to Jen, a custom songwriter in the Pacific Northwest. Jacob is helping her migrate off Wix.
@@ -11,35 +15,47 @@ This is a static site clone of customlifesongs.com (originally on Wix), rebuilt 
 ## Dev Server
 
 ```bash
-cd /Users/jacob/Documents/Website/customlifesongs
-python3 -m http.server 4002 --bind 0.0.0.0
+python3 serve.py
 ```
 
-Must use `--bind 0.0.0.0` for LAN access. Serves at `http://localhost:4002`.
+Serves at `http://localhost:4002` (and LAN at `http://192.168.0.28:4002`). Includes SSE-based auto-reload — the browser refreshes automatically whenever any project file changes.
 
 For external access during development, use cloudflared:
 ```bash
 cloudflared tunnel --url http://localhost:4002
 ```
 
+## Screenshot Tool
+
+To visually inspect the site, run:
+
+```bash
+node screenshot.js                   # hero view
+node screenshot.js --section=about   # crop to a specific section
+node screenshot.js --scroll=800      # specific scroll position
+node screenshot.js --full            # full-page
+```
+
+Then read `screenshot.png` to see the result. See [SCREENSHOT.md](SCREENSHOT.md) for full documentation. Node is managed via nvm — if `node` isn't found, run `export NVM_DIR="$HOME/.nvm" && source "$NVM_DIR/nvm.sh"` first.
+
 ## File Structure
+
+This is a **single-page site** — all content lives in `index.html` as anchor sections.
 
 ```
 /
-├── index.html               — Home page
-├── about/index.html         — About Me
-├── legacy-projects/index.html
-├── baby-wishes/index.html
-├── other-custom-songs/index.html
-├── faq/index.html           — <details> accordion
-├── styles.css               — All styles (no inline styles, no Tailwind)
-├── script.js                — Shared nav JS (mobile menu + logo animation)
-├── _redirects               — Cloudflare Pages redirect rules (Wix slugs → new paths)
+├── index.html       — Single page with sections: #hero, #about, #legacy-projects,
+│                      #baby-wishes, #other-songs, #faq, #newsletter, #contact
+├── styles.css       — All styles (no inline styles, no Tailwind)
+├── script.js        — Nav JS: mobile menu, logo scroll animation, scroll-spy
+├── serve.py         — Dev server with SSE auto-reload (python3 serve.py)
+├── screenshot.js    — On-demand Playwright screenshot tool
+├── _redirects       — Cloudflare Pages redirect rules (old paths → /)
 └── images/
     ├── logo.png             — Circular tree logo (primary brand mark)
-    ├── hero-couple.jpg      — Home page hero image
-    ├── guitar-woman.jpg     — Home page about section
-    └── about-portrait.jpg   — About Me page portrait
+    ├── hero-couple.jpg      — Hero image
+    ├── guitar-woman.jpg     — About section image
+    └── about-portrait.jpg   — Jen's portrait
 ```
 
 ## Design System
@@ -82,16 +98,14 @@ The nav is the most complex part. Read this carefully before touching it.
 
 `grid-template-rows: var(--nav-h)` is explicit (70px) so the grid row height never stretches to match the large logo, keeping nav-links vertically centered at all times.
 
-### Logo Animation (home page only)
+### Logo Animation
 
-On the home page, the logo starts large (280px) in the hero and tracks scroll continuously until it docks small (50px) into the navbar. This is driven entirely by JS (`script.js`) with a linear interpolation on `scrollY`.
+The logo starts large (280px) in the hero and tracks scroll continuously until it docks small (50px) into the navbar. Driven entirely by JS (`script.js`) with linear interpolation on `scrollY`.
 
 - `LOGO_LARGE = 280` — initial hero size
 - `LOGO_SMALL = 50` — final nav size
 - `START_Y = 150` — how far (px) below nav center the logo starts
 - `SCROLL_RANGE = 280` — px of scroll to complete the animation
-
-On all other pages, the logo is a normal 50px icon centered in the nav from the start. The JS checks `window.location.pathname === '/'` to branch behavior.
 
 **Do not add CSS transitions to `.nav-logo-wrap img`** — JS drives width, height, and transform directly each scroll frame. CSS transitions would fight it.
 
@@ -108,9 +122,9 @@ At `max-width: 820px`:
 
 These need action from Jen:
 
-1. **Patrick's Song video** (`legacy-projects/index.html`): The original video was hosted on Wix and is inaccessible. There's a placeholder `<div class="video-placeholder">` with instructions. Jen needs to upload the video to YouTube or Vimeo, then replace the placeholder with an `<iframe>` embed.
+1. **Patrick's Song video** (`#legacy-projects` section in `index.html`): The original video was hosted on Wix and is inaccessible. There's a placeholder `<div class="video-placeholder">` with instructions. Jen needs to upload the video to YouTube or Vimeo, then replace the placeholder with an `<iframe>` embed.
 
-2. **Newsletter form** (appears on home, legacy-projects, about, other-custom-songs pages): Forms have `action="#"` and a `<!-- TODO -->` comment. Replace with a Mailchimp embed URL (or similar) once Jen sets up her list.
+2. **Newsletter form** (`#newsletter` section in `index.html`): Form has `action="#"` and a `<!-- TODO -->` comment. Replace with a Mailchimp embed URL (or similar) once Jen sets up her list.
 
 3. **Cloudflare Pages**: Repo is live at https://github.com/jacoblast/customlifesongs.git on `main`. Just needs to be connected in the Cloudflare dashboard (Pages → Create project → Connect to Git).
 
