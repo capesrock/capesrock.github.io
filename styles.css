@@ -553,6 +553,19 @@ main { padding-top: var(--nav-h); }
   accent-color: var(--c-moss);
 }
 
+.shorts-section {
+  border-top: 3px solid #2d0a5e;
+  padding: 48px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.shorts-section .video-player {
+  aspect-ratio: 4/3;
+  width: 480px;
+  max-width: 100%;
+}
+
 .video-player {
   width: 100%;
   aspect-ratio: 16/9;
