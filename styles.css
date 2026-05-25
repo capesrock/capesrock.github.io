@@ -643,12 +643,13 @@ main { padding-top: var(--nav-h); }
   position: relative;
   border-radius: 2px;
   overflow: hidden;
+  max-height: 480px;
   box-shadow: 0 8px 24px -4px rgba(0,0,0,0.55), 0 24px 56px -8px rgba(0,0,0,0.40);
 }
 
 .baby-wishes-img img {
   width: 100%;
-  height: 100%;
+  height: 480px;
   object-fit: cover;
   object-position: center center;
   display: block;
