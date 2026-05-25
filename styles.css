@@ -299,7 +299,7 @@ main { padding-top: var(--nav-h); }
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   text-align: center;
-  padding: 52px 32px;
+  padding: 32px 32px;
 }
 
 .newsletter h3 {
@@ -630,16 +630,42 @@ main { padding-top: var(--nav-h); }
    BABY WISHES
    ================================ */
 .baby-wishes-content {
-  max-width: 760px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 16px 32px 80px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.baby-wishes-img {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -4px rgba(0,0,0,0.55), 0 24px 56px -8px rgba(0,0,0,0.40);
+}
+
+.baby-wishes-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  border-radius: 2px;
+}
+
+.baby-wishes-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .baby-wishes-content p {
   font-size: 1.05rem;
   line-height: 1.85;
   color: var(--c-text);
+  margin-bottom: 16px;
 }
 
 /* ================================
@@ -773,8 +799,9 @@ section[id], #contact {
    ================================ */
 .about-cta {
   text-align: center;
-  padding: 40px 32px 64px;
+  padding: 24px 32px 40px;
   border-top: 1px solid #2d0a5e;
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .about-cta h3 {
