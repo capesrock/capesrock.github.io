@@ -513,7 +513,7 @@ main { padding-top: var(--nav-h); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 56px;
-  align-items: start;
+  align-items: center;
 }
 
 .legacy-text p { margin-bottom: 18px; }
