@@ -372,7 +372,7 @@ main { padding-top: var(--nav-h); }
    ================================ */
 .testimonial-section {
   padding: 48px 32px 64px;
-  border-top: 3px solid #2d0a5e;
+  border-top: 1px solid #2d0a5e;
 }
 
 .testimonial {
@@ -398,7 +398,7 @@ main { padding-top: var(--nav-h); }
    CONTACT
    ================================ */
 #contact {
-  border-top: 3px solid #2d0a5e;
+  border-top: 1px solid #2d0a5e;
 }
 
 .contact-section {
@@ -437,7 +437,7 @@ main { padding-top: var(--nav-h); }
    ================================ */
 .about-bio-band {
   background: rgba(147, 195, 255, 0.20);
-  border-top: 3px solid #2d0a5e;
+  border-top: 1px solid #2d0a5e;
 }
 
 .about-bio {
@@ -477,7 +477,7 @@ main { padding-top: var(--nav-h); }
 
 .about-bio-text h3 {
   font-family: 'Jost', sans-serif;
-  font-size: clamp(1.9rem, 3.5vw, 3rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -557,7 +557,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .shorts-section {
-  border-top: 3px solid #2d0a5e;
+  border-top: 1px solid #2d0a5e;
   padding: 48px 32px;
   display: flex;
   justify-content: center;
@@ -739,7 +739,7 @@ section[id], #contact {
 
 /* Dark divider bar between sections */
 #about, #legacy-projects, #baby-wishes, #other-songs, #faq, #newsletter, .testimonial-section {
-  border-top: 3px solid #2d0a5e;
+  border-top: 1px solid #2d0a5e;
 }
 
 /* Full gradient applied per-section so each section contains the complete gradient */
@@ -774,7 +774,7 @@ section[id], #contact {
 .about-cta {
   text-align: center;
   padding: 40px 32px 64px;
-  border-top: 3px solid #2d0a5e;
+  border-top: 1px solid #2d0a5e;
 }
 
 .about-cta h3 {
