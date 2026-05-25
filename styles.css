@@ -954,7 +954,8 @@ footer {
   .newsletter { padding: 40px 20px; }
   .faq-wrap { padding: 0 20px 56px; }
   .page-header { padding: 44px 20px 32px; }
-  .baby-wishes-content { padding: 40px 20px 64px; }
+  .baby-wishes-content { padding: 40px 20px 64px; grid-template-columns: 1fr; }
+  .baby-wishes-img img { height: 300px; }
   .legacy-split { grid-template-columns: 1fr; gap: 40px; }
   .media-wrap { margin: 0; }
 
