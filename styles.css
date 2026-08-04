@@ -632,11 +632,17 @@ main { padding-top: var(--nav-h); }
 .baby-wishes-content {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 16px 32px 80px;
+  padding: 16px 32px 56px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 56px;
   align-items: center;
+}
+
+.baby-wishes-video {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
 }
 
 .baby-wishes-img {
@@ -936,6 +942,7 @@ footer {
     padding: 48px 20px;
     gap: 28px;
   }
+  .about-split-img { height: 340px; }
   .about-split-img img { height: 340px; }
 
   .about-bio {
@@ -943,7 +950,8 @@ footer {
     padding: 32px 20px 56px;
     gap: 28px;
   }
-  .about-bio-img img { max-width: 100%; }
+  .about-bio-img { height: 300px; }
+  .about-bio-img img { width: 100%; height: 300px; object-fit: cover; }
 
   .hero { height: 48vh; }
   .hero-title { padding: 20px 20px 36px; }

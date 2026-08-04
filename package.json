@@ -20,5 +20,8 @@
   "homepage": "https://github.com/capesrock/customlifesongs#readme",
   "dependencies": {
     "playwright": "^1.60.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }
