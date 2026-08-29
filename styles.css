@@ -528,6 +528,14 @@ main { padding-top: var(--nav-h); }
   margin: 0 0 24px;
 }
 
+.media-caption {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--c-text-dim);
+  font-style: italic;
+  margin: -12px 0 24px;
+}
+
 .media-wrap {
   display: flex;
   flex-direction: column;
@@ -639,7 +647,7 @@ main { padding-top: var(--nav-h); }
   align-items: center;
 }
 
-.baby-wishes-video {
+.baby-wishes-media {
   max-width: 720px;
   margin: 0 auto;
   padding: 0 32px 80px;
