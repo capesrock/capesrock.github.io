@@ -529,11 +529,10 @@ main { padding-top: var(--nav-h); }
 }
 
 .media-caption {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--c-text-dim);
-  font-style: italic;
-  margin: -12px 0 24px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--c-text);
+  margin: 0 0 24px;
 }
 
 .media-wrap {
@@ -550,12 +549,12 @@ main { padding-top: var(--nav-h); }
 
 .media-label {
   font-family: 'Jost', sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--c-text-dim);
-  margin: 0;
+  margin: 0 0 18px;
 }
 
 .audio-player {
